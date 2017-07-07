@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,35 +22,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="731-yg-vNN">
-                                <rect key="frame" x="83" y="208" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.97351540658093327" green="1" blue="0.90895911309454691" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Video"/>
-                                <connections>
-                                    <action selector="takeVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="asA-ix-V4R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POr-QN-8wV">
-                                <rect key="frame" x="192" y="208" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEW-pI-te2">
+                                <rect key="frame" x="16" y="567" width="88" height="80"/>
                                 <color key="backgroundColor" red="0.97351540660000002" green="1" blue="0.90895911309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Picture"/>
-                                <connections>
-                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WTe-Nd-aHI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEW-pI-te2">
-                                <rect key="frame" x="83" y="316" width="209" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.97351540660000002" green="1" blue="0.90895911309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="fk4-i1-8yg"/>
+                                    <constraint firstAttribute="height" constant="80" id="ups-2b-pRa"/>
+                                </constraints>
                                 <state key="normal" title="Photos"/>
                                 <connections>
                                     <action selector="goPhotosApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcn-wP-eyf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="731-yg-vNN">
+                                <rect key="frame" x="84.5" y="283" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.97351540658093327" green="1" blue="0.90895911309454691" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KDT-Ha-KUZ"/>
+                                    <constraint firstAttribute="width" constant="100" id="Xfw-NL-iPF"/>
+                                </constraints>
+                                <state key="normal" title="Video"/>
+                                <connections>
+                                    <action selector="takeVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="asA-ix-V4R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POr-QN-8wV">
+                                <rect key="frame" x="191.5" y="283" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.97351540660000002" green="1" blue="0.90895911309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9GT-TW-hf5"/>
+                                    <constraint firstAttribute="height" constant="100" id="X0f-hM-R8j"/>
+                                </constraints>
+                                <state key="normal" title="Picture"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WTe-Nd-aHI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="POr-QN-8wV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fpa-6B-rd1"/>
+                            <constraint firstItem="731-yg-vNN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Mr0-5J-xLT"/>
+                            <constraint firstItem="731-yg-vNN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-53" id="OPM-V9-3zI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dEW-pI-te2" secondAttribute="bottom" constant="20" id="b2E-k4-ZEh"/>
+                            <constraint firstItem="dEW-pI-te2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fIp-id-vrc"/>
+                            <constraint firstItem="POr-QN-8wV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="54" id="svB-kX-JnB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
